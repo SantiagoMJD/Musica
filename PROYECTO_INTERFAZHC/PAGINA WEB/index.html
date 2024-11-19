@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Sorting sobre Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="card-sorting-container">
+        <h2>Card Sorting sobre Tecnología</h2>
+        <p>Arrastra una tarjeta y suéltala en una categoría:</p>
+        <div class="categories">
+            <div class="category" id="software-development" data-category="software">
+                <h3>Desarrollo de Software</h3>
+            </div>
+            <div class="category" id="hardware" data-category="hardware">
+                <h3>Hardware</h3>
+            </div>
+            <div class="category" id="ai-ml" data-category="ai">
+                <h3>Inteligencia Artificial / Machine Learning</h3>
+            </div>
+            <div class="category" id="cybersecurity" data-category="cybersecurity">
+                <h3>Ciberseguridad</h3>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card" draggable="true" data-name="1_S">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/1_S.jpg" alt="Software">
+            </div>
+            <div class="card" draggable="true" data-name="2_S">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/2_S.jpg" alt="Software">
+            </div>
+            <div class="card" draggable="true" data-name="3_S">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/3_S.jpg" alt="Software">
+            </div>
+            <div class="card" draggable="true" data-name="4_S">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/4_S.jpg" alt="Software">
+            </div>
+            <div class="card" draggable="true" data-name="5_S">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/5_S.jpg" alt="Software">
+            </div>
+
+
+            <div class="card" draggable="true" data-name="6_C">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/6_C.jpg" alt="Cybersecurity">
+            </div>
+            <div class="card" draggable="true" data-name="7_C">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/7_C.jpg" alt="Cybersecurity">
+            </div>
+            <div class="card" draggable="true" data-name="8_C">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/8_C.jpeg" alt="Cybersecurity">
+            </div>
+            <div class="card" draggable="true" data-name="9_C">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/9_C.jpg" alt="Cybersecurity">
+            </div>
+            <div class="card" draggable="true" data-name="10_C">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/10_C.jpg" alt="Cybersecurity">
+            </div>
+
+
+            <div class="card" draggable="true" data-name="11_H">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/ac7ea8dfd34822c8715239eff41b7ac7091409f1/imagenes/11_H.jpg" alt="Hardware">
+            </div>
+            <div class="card" draggable="true" data-name="12_H">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/12_H.jpg" alt="Hardware">
+            </div>
+            <div class="card" draggable="true" data-name="13_H">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/13_H.jpg" alt="Hardware">
+            </div>
+            <div class="card" draggable="true" data-name="14_H">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/14_H.jpg" alt="Hardware">
+            </div>
+            <div class="card" draggable="true" data-name="15_H">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/15_H.jpg" alt="Hardware">
+            </div>
+
+
+            <div class="card" draggable="true" data-name="16_ia">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/16_ia.jpg" alt="AI">
+            </div>
+            <div class="card" draggable="true" data-name="17_ia">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/17_ia.jpg" alt="AI">
+            </div>
+            <div class="card" draggable="true" data-name="18_ia">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/18_ia.jpg" alt="AI">
+            </div>
+            <div class="card" draggable="true" data-name="19_ia">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/19_ia.jpg" alt="AI">
+            </div>
+            <div class="card" draggable="true" data-name="20_ia">
+                <img src="https://raw.githubusercontent.com/SantiagoMJD/Musica/4a850844f1a3880f9c5714bf5e38efdc9016d930/imagenes/20_ia.jpg" alt="AI">
+            </div>
+
+        </div>
+
+        <button id="submit-button">Enviar Respuesta</button>
+
+        <!-- Información del equipo -->
+        <div class="team-info">
+            <h3>Equipo de Desarrollo</h3>
+            <p>LUIS JESUS QUINTERO BAÑUELOS</p>
+            <p>BRANDON OMAR CARDENAS GONZALEZ</p>
+            <p>MOISES JUAREZ DE SANTIAGO</p>
+        </div>
+    </div>
+
+    <!-- Agregar la biblioteca SheetJS para manejar el archivo Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.0/package/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
